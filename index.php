@@ -48,7 +48,7 @@ $products = $productRepository->getProductsNewArrival();
                                 <img src="<?= htmlspecialchars($product['image_url'] ?? 'assets/img/no-image.png') ?>"
                                      class="d-block w-100 product-img" alt="<?= htmlspecialchars($product['item']) ?>">
 
-                                <h2 class="glow fs-4 fw-bold mt-1 mb-4"><?=$product['price']?></h2>
+                                <h2 class="glow fs-4 fw-bold mt-1 mb-4">Price $ <?=$product['price']?></h2>
                                 <ul class="list-group list-group-flush fs-6 mb-1 product-img">
                                     <li class="list-group-item border-0"><i class="bi bi-check2"><?=$product['description']?></i></li>
                                 </ul>
@@ -91,7 +91,7 @@ $products = $productRepository->getProductsNewArrival();
                                     <?= htmlspecialchars($category['name']) ?>
                                 </h2>
                             </div>
-                            <a href="products.php?category_id=<?= $category['id'] ?>" class="stretched-link"></a>
+                            <a href="items.php?category_id=<?= $category['id'] ?>" class="stretched-link"></a>
                         </div>
                     </div>
                     <?php endforeach; ?>
